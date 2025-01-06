@@ -1,0 +1,91 @@
+@media screen and (max-width: 1000px)
+{
+	#donor_popup
+	{
+		padding: 30px;
+	}
+
+	#donor_popup .grid_inp_box
+	{
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#donor_popup .grid_free
+	{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 750px)
+{
+	#donor_popup #scces_box
+	{
+		font-size: 25px;
+	}
+
+	#donor_popup .choos_box.struct
+	{
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	#donor_popup .choos_box.struct .radio_box
+	{
+		margin: 0 0 10px 0;
+	}
+
+	#donor_popup .form_title
+	{
+		font-size: 24px;
+	}
+
+	#donor_popup .grid_inp_box,
+	#donor_popup .grid_two
+	{
+	    grid-template-columns: 1fr;
+	}
+
+	#donor_popup
+	{
+		padding: 30px 20px;
+	}
+
+	#donor_popup .sub_title,
+	#donor_popup .pers_text *
+	{
+		font-size: 18px;
+	}
+
+	#donor_popup .grid_inp_box
+	{
+		margin-bottom: 30px;
+	}
+
+	#donor_popup .remark,
+	#donor_popup .radio_descr
+	{
+		font-size: 16px;
+	}
+
+	#donor_popup .ready_box
+	{
+		flex-wrap: wrap;
+		margin-top: 30px;
+		justify-content: center;
+	}
+
+	#donor_popup .persent_box
+	{
+		width: 100%;
+	}
+
+	#donor_popup .persent_box
+	{
+		margin-bottom: 20px;
+	}
+
+	#donor_popup .go_back
+	{
+		margin-left: 0px;
+	}
+}

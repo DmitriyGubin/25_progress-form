@@ -1,0 +1,268 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Форма</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/media.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.min.css" />
+    <script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+    <script src="js/jquery.mask.min.js" type="text/javascript"></script>
+    <script src="js/inputmask.js" type="text/javascript"></script>
+    <script src="js/jquery.nicescroll.min.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<a class="open_popup_butt" data-fancybox="pop-up" data-src="#donor_popup" href="javascript:;">
+    	Открыть окно
+	</a>
+
+	<div style="display: none;" id="donor_popup">
+	    <form id="donor_form" class="">
+            <h2 class="form_title">Анкета кандидата в доноры</h2>
+            <div class="step_one step_form">
+                <div class="grid_inp_box">
+                    <input class="form_inp required" placeholder="Фамилия, имя, щтчество *" type="text" name="fio">
+                    <input class="form_inp required" placeholder="День рождения дд.мм.гггг *" type="date" name="bearth_day">
+                    <input class="form_inp required" placeholder="Рост см *" type="number" name="height">
+                    <input class="form_inp required" placeholder="Вес кг *" type="number" name="weight">
+                    <input class="form_inp" placeholder="Национальность" type="text" name="nationality">
+                </div>
+
+                <div class="sub_title">Контактная информация *</div>
+                <div class="grid_two">
+                    <input class="form_inp mail required" placeholder="E-mail *" type="text" name="email">
+                    <input class="form_inp phone required" placeholder="Телефон *" type="text" name="phone">
+                </div>
+
+                <div class="remark">Район проживания в Новосибирске</div>
+
+                <div class="inp_box_wrap">
+                    <div class="inp_box region form_inp">
+                        <div class="flex_line">
+                            <input id="region_input" type="text" readonly name="region" value="Центральный" class="paste_inp">
+
+                            <svg class="hide_mobile" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5.5 5.5L10 1" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+
+                        <div class="hide_box scroll" style="display: none;">
+                            <div class="hide_item">Дзержинский</div>
+                            <div class="hide_item">Железнодорожный </div>
+                            <div class="hide_item">Заельцовский </div>
+                            <div class="hide_item">Калининский </div>
+                            <div class="hide_item">Кировский </div>
+                            <div class="hide_item">Ленинский </div>
+                            <div class="hide_item">Октябрьский</div>
+                            <div class="hide_item">Первомайский</div>
+                            <div class="hide_item">Советский</div>
+                            <div class="hide_item">Центральный</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remark">
+                    Бываете ли Вы длительное время за пределами Новосибирска (как часто, на какой срок, причина отсутствия)?
+                </div>
+                <textarea class="out_reason"></textarea>
+
+                <div class="remark">
+                    Имеете ли вы возможность посещать клинику (ул. Коммунистическая 17/1), ориентировочно 2 раза в неделю, с 8:00 до 8:30 и с 12:30 до 15:30?
+                </div>
+
+                <div class="choos_box">
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_time" value="1">
+                        <div class="radio_descr">Да</div>
+                    </div>
+
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_time" value="2">
+                        <div class="radio_descr">Нет</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step_two step_form hide">
+                <div class="sub_title">Фенотипические признаки:</div>
+                <div class="remark">Структура волос</div>
+                <div class="choos_box struct">
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_hair" value="1">
+                        <div class="radio_descr">Прямые</div>
+                    </div>
+
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_hair" value="2">
+                        <div class="radio_descr">Вьющиеся</div>
+                    </div>
+
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_hair" value="3">
+                        <div class="radio_descr">Кудрявые</div>
+                    </div>
+                </div>
+
+                <div class="grid_free">
+                    <input class="form_inp" placeholder="Цвет волос" type="text" name="color_hair">
+
+                    <input class="form_inp" placeholder="Цвет глаз" type="text" name="color_eyes">
+
+                    <div class="inp_box_wrap">
+                        <div class="inp_box form_inp">
+                            <div class="flex_line">
+                                <input type="text" readonly name="region" value="Телосложение" class="paste_inp">
+
+                                <svg class="hide_mobile" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L5.5 5.5L10 1" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg>
+                            </div>
+
+                            <div class="hide_box" style="display: none;">
+                                <div class="hide_item">Худощавое</div>
+                                <div class="hide_item">Нормальное</div>
+                                <div class="hide_item">Плотное</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step_free step_form hide">
+                <div class="grid_two">
+                    <div class="grid_item">
+                        <div class="remark">Группа крови</div>
+                        <div class="inp_box_wrap">
+                            <div class="inp_box form_inp">
+                                <div class="flex_line">
+                                    <input type="text" readonly name="blod" value="I" class="paste_inp">
+
+                                    <svg class="hide_mobile" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L5.5 5.5L10 1" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="hide_box" style="display: none;">
+                                    <div class="hide_item">I</div>
+                                    <div class="hide_item">II</div>
+                                    <div class="hide_item">III</div>
+                                    <div class="hide_item">IV</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid_item">
+                        <div class="remark">Резус фактор</div>
+                        <div class="inp_box_wrap">
+                            <div class="inp_box form_inp factor">
+                                <div class="flex_line">
+                                    <input type="text" readonly name="resus" value="Отрицательный" class="paste_inp">
+
+                                    <svg class="hide_mobile" width="11" height="6" viewBox="0 0 11 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 1L5.5 5.5L10 1" stroke="#1D1D1D" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </div>
+
+                                <div class="hide_box" style="display: none;">
+                                    <div class="hide_item">Отрицательный</div>
+                                    <div class="hide_item">Положительный</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remark big_marg_top">
+                    Имеете ли Вы хронические заболевания (если да - перечислите, какие)
+                </div>
+                <div class="choos_box">
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_sick" value="1">
+                        <div class="radio_descr">Да</div>
+                    </div>
+
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_sick" value="2">
+                        <div class="radio_descr">Нет</div>
+                    </div>
+                </div>
+
+                <textarea class="out_reason big_marg_top"></textarea>
+
+                <div class="remark big_marg_top">
+                   Вы болели в прошлом заболеваниями, передающимися половым путём (если да - перечислите, какие)
+                </div>
+                <div class="choos_box">
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_sex" value="1">
+                        <div class="radio_descr">Да</div>
+                    </div>
+
+                    <div class="radio_box">
+                        <input class="radio_inp" type="radio" name="choice_sex" value="2">
+                        <div class="radio_descr">Нет</div>
+                    </div>
+                </div>
+
+                <textarea class="out_reason big_marg_top"></textarea>
+            </div>
+
+            <div class="ready_box">
+                <div class="persent_box">
+                    <div class="pers_text">
+                        <span>Готово</span>
+                        <span id="pers_num">33%</span>
+                    </div>
+
+                    <div class="progress_line">
+                        <div class="ready_line"></div>
+                    </div>
+                </div>
+
+                <div class="go_back">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div id="go_ahead">
+                    <div class="ahead_text">Далее</div>
+                    <svg width="33px" height="33px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div class="finish_box hide">
+                <div class="go_back">
+                    <svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div id="send_order">
+                    <svg viewBox='0 0 15 20' fill='#fff' xmlns='http://www.w3.org/2000/svg'><path d='M.6 1.97h4.38A2.55 2.55 0 017.5 0c1.2 0 2.28.81 2.52 1.97h4.38c.36 0 .6.3.6.58v16.2a.6.6 0 01-.6.59H.6a.6.6 0 01-.6-.58V2.56a.6.6 0 01.6-.59zm3.72 1.16v1.33h6.42V3.13H9.48c-.42 0-.66-.23-.6-.64 0-.75-.6-1.33-1.38-1.33-.78 0-1.38.58-1.38 1.33 0 .35-.24.64-.6.64h-1.2zm7.62 0v2.5H3.12v-2.5H1.2v15.05h12.6V3.13h-1.86z'/><path d='M3.9 9.11c-.78 0-.78-1.15 0-1.15h7.2c.78 0 .78 1.15 0 1.15H3.9zM3.9 12.3c-.78 0-.78-1.16 0-1.16h7.2c.78 0 .78 1.16 0 1.16H3.9zM3.9 15.42c-.78 0-.78-1.16 0-1.16h7.2c.78 0 .78 1.16 0 1.16H3.9z'/></svg>
+                    <span>Отправить анкету</span>
+                </div>
+
+                <div class="polite_box">
+                    Нажимая на кнопку отправить, я даю <br>
+                    <a href="#">соглавсие на обработку персональных данных</a>
+                </div>
+            </div>
+        </form>
+        <div id="scces_box" class="hide">
+            Ваша заявка успешно отправлена!
+        </div>
+	</div>
+    
+
+
+
+<script type="text/javascript" src="fancybox/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html> 
